@@ -6,7 +6,7 @@
 /*   By: pedperei <pedperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 11:54:09 by pedperei          #+#    #+#             */
-/*   Updated: 2022/12/26 17:21:07 by pedperei         ###   ########.fr       */
+/*   Updated: 2022/12/29 19:58:43 by pedperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ t_map			*free_t_map(t_map *map, char error);
 void			open_xpm_images(t_solong *so_long);
 void			select_image(t_solong *so_long, int i, int j);
 void			put_images_to_game(t_solong *so_long);
-void			check_if_game_finished(t_solong *so_long, int pos_l, int pos_c);
+int				check_if_game_finished(t_solong *so_long, int pos_l, int pos_c);
 int				key_press(int key_code, t_solong *param);
 int				key_press1(void);
 

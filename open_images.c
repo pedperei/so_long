@@ -6,7 +6,7 @@
 /*   By: pedperei <pedperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 12:52:39 by pedperei          #+#    #+#             */
-/*   Updated: 2022/12/26 15:23:07 by pedperei         ###   ########.fr       */
+/*   Updated: 2022/12/30 16:07:56 by pedperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ void	open_xpm_images(t_solong *so_long)
 	t_images	*image_type;
 
 	image_type = (t_images *)ft_calloc(1, sizeof(t_images));
-	x = 64;
-	y = 64;
+	x = PX;
+	y = PX;
 	image_type->wall = mlx_xpm_file_to_image(so_long->mlx_ptr,
-			"./textures/earth.xpm", &x, &y);
+			"./textures/wall.xpm", &x, &y);
 	image_type->player = mlx_xpm_file_to_image(so_long->mlx_ptr,
-			"./textures/dolphin.xpm", &x, &y);
+			"./textures/player.xpm", &x, &y);
 	image_type->exit = mlx_xpm_file_to_image(so_long->mlx_ptr,
-			"./textures/foguetao.xpm", &x, &y);
+			"./textures/exit.xpm", &x, &y);
 	image_type->collectible = mlx_xpm_file_to_image(so_long->mlx_ptr,
 			"./textures/fish.xpm", &x, &y);
 	image_type->empty = mlx_xpm_file_to_image(so_long->mlx_ptr,
@@ -36,24 +36,21 @@ void	open_xpm_images(t_solong *so_long)
 
 void	select_image(t_solong *so_long, int i, int j)
 {
-	int	px;
-
-	px = 64;
 	if (so_long->map->game_map[i][j] == '1')
 		mlx_put_image_to_window(so_long->mlx_ptr, so_long->win_ptr,
-			so_long->img_ptr->wall, j * px, i * px);
+			so_long->img_ptr->wall, j * PX, i * PX);
 	else if (so_long->map->game_map[i][j] == 'C')
 		mlx_put_image_to_window(so_long->mlx_ptr, so_long->win_ptr,
-			so_long->img_ptr->collectible, j * px, i * px);
+			so_long->img_ptr->collectible, j * PX, i * PX);
 	else if (so_long->map->game_map[i][j] == 'E')
 		mlx_put_image_to_window(so_long->mlx_ptr, so_long->win_ptr,
-			so_long->img_ptr->exit, j * px, i * px);
+			so_long->img_ptr->exit, j * PX, i * PX);
 	else if (so_long->map->game_map[i][j] == 'P')
 		mlx_put_image_to_window(so_long->mlx_ptr, so_long->win_ptr,
-			so_long->img_ptr->player, j * px, i * px);
+			so_long->img_ptr->player, j * PX, i * PX);
 	else if (so_long->map->game_map[i][j] == '0')
 		mlx_put_image_to_window(so_long->mlx_ptr, so_long->win_ptr,
-			so_long->img_ptr->empty, j * px, i * px);
+			so_long->img_ptr->empty, j * PX, i * PX);
 }
 
 void	put_images_to_game(t_solong *so_long)

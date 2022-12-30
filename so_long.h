@@ -6,7 +6,7 @@
 /*   By: pedperei <pedperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 11:54:09 by pedperei          #+#    #+#             */
-/*   Updated: 2022/12/30 14:46:00 by pedperei         ###   ########.fr       */
+/*   Updated: 2022/12/30 16:16:28 by pedperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@
 # define KEY_S 115
 # define KEY_D 100
 
-# define PX 64
+# define PX 32
 
 typedef struct s_map
 {

@@ -6,7 +6,7 @@
 /*   By: pedperei <pedperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 14:36:59 by pedperei          #+#    #+#             */
-/*   Updated: 2022/12/29 20:02:42 by pedperei         ###   ########.fr       */
+/*   Updated: 2022/12/30 12:19:51 by pedperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ void	move_right(t_solong *so_long)
 int	key_press(int key_code, t_solong *param)
 {
 	if (key_code == KEY_ESC)
-		exit(0);
+		free_mem_exit(param);
 	if (key_code == KEY_UP || key_code == KEY_W)
 		move_up(param);
 	if (key_code == KEY_DOWN || key_code == KEY_S)

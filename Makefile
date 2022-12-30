@@ -1,7 +1,7 @@
 NAME = so_long
 FUNC = init_map.c\
 	   check_map.c\
-	   aux.c\
+	   check_finish.c\
 	   mlx_tests.c\
 	   movements.c\
 	   open_images.c\

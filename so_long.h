@@ -6,7 +6,7 @@
 /*   By: pedperei <pedperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 11:54:09 by pedperei          #+#    #+#             */
-/*   Updated: 2022/12/29 19:58:43 by pedperei         ###   ########.fr       */
+/*   Updated: 2022/12/30 13:09:26 by pedperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,16 @@
 # include <unistd.h>
 
 # define KEY_ESC 65307
+# define KEY_LEFT 65361
+# define KEY_UP 65362
+# define KEY_RIGHT 65363
+# define KEY_DOWN 65364
+
 # define KEY_W 119
 # define KEY_A 97
 # define KEY_S 115
 # define KEY_D 100
-# define KEY_UP 65362
-# define KEY_LEFT 65361
-# define KEY_DOWN 65364
-# define KEY_RIGHT 65363
+
 
 typedef struct s_map
 {
@@ -64,8 +66,6 @@ typedef struct s_solong
 	void		*mlx_ptr;
 	void		*win_ptr;
 	t_images	*img_ptr;
-	void		*wall;
-	char		*textures_path;
 	int			n_moves;
 	t_map		*map;
 
@@ -73,9 +73,6 @@ typedef struct s_solong
 
 size_t			ft_strlen(const char *s);
 void			*ft_calloc(size_t nitems, size_t size);
-//void		my_mlx_pixel_put(t_data *data, int x, int y, int color);
-//int			create_trgb(int t, int r, int g, int b);
-//int			close_window(int keycode, t_data *vars);
 t_map			*init_map(char **str_map);
 int				count_lines(char *map);
 int				is_wall(t_map *map);
@@ -90,6 +87,6 @@ void			select_image(t_solong *so_long, int i, int j);
 void			put_images_to_game(t_solong *so_long);
 int				check_if_game_finished(t_solong *so_long, int pos_l, int pos_c);
 int				key_press(int key_code, t_solong *param);
-int				key_press1(void);
+int				free_mem_exit(t_solong *so_long);
 
 #endif

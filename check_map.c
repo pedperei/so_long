@@ -6,7 +6,7 @@
 /*   By: pedperei <pedperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 22:54:29 by pedperei          #+#    #+#             */
-/*   Updated: 2022/12/25 00:09:33 by pedperei         ###   ########.fr       */
+/*   Updated: 2022/12/31 14:52:08 by pedperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,15 @@ void	is_path_doable(t_map *map, char **save_path, int pos_l, int pos_c)
 {
 	if (!(pos_l >= 0 && pos_l < map->lin && pos_c >= 0 && pos_c < map->col))
 		return ;
-	if (!(map->game_map[pos_l][pos_c] != '1'))
+	if ((map->game_map[pos_l][pos_c] == '1'))
 		return ;
 	if (save_path[pos_l][pos_c] == '1')
 		return ;
 	if (map->game_map[pos_l][pos_c] == 'E')
+	{
 		map->check_path_exit = 1;
+		return ;
+	}
 	if (map->game_map[pos_l][pos_c] == 'C' && save_path[pos_l][pos_c] != '1')
 		map->check_path_collect++;
 	save_path[pos_l][pos_c] = '1';

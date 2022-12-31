@@ -2,7 +2,7 @@ NAME = so_long
 FUNC = init_map.c\
 	   check_map.c\
 	   check_finish.c\
-	   mlx_tests.c\
+	   so_long.c\
 	   movements.c\
 	   open_images.c\
 	   utils.c\

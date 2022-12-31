@@ -6,7 +6,7 @@
 /*   By: pedperei <pedperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 14:36:59 by pedperei          #+#    #+#             */
-/*   Updated: 2022/12/30 12:19:51 by pedperei         ###   ########.fr       */
+/*   Updated: 2022/12/31 15:20:06 by pedperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	move_up(t_solong *so_long)
 	j = so_long->map->player_c;
 	if ((i - 1 > 0) && (so_long->map->game_map[i - 1][j] != '1'))
 	{
-		if(!check_if_game_finished(so_long, i - 1, j))
+		if (!check_if_game_finished(so_long, i - 1, j))
 			return ;
 		so_long->map->player_l--;
 		so_long->map->game_map[i - 1][j] = 'P';
@@ -40,7 +40,8 @@ void	move_down(t_solong *so_long)
 
 	i = so_long->map->player_l;
 	j = so_long->map->player_c;
-	if ((i + 1 < so_long->map->lin) && (so_long->map->game_map[i + 1][j] != '1'))
+	if ((i + 1 < so_long->map->lin) && (so_long->map->game_map[i
+				+ 1][j] != '1'))
 	{
 		if (check_if_game_finished(so_long, i + 1, j) == 0)
 			return ;

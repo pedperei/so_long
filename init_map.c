@@ -6,7 +6,7 @@
 /*   By: pedperei <pedperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 16:52:16 by pedperei          #+#    #+#             */
-/*   Updated: 2023/01/05 00:07:52 by pedperei         ###   ########.fr       */
+/*   Updated: 2023/01/05 18:36:11 by pedperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,22 +61,22 @@ int	char_errors(t_map *map)
 {
 	if (map->check_chars != 1)
 	{
-		printf("Error\nInvalid characthers\n");
+		ft_printf("Error\nInvalid characthers\n");
 		return (0);
 	}
 	if (map->count_exit != 1)
 	{
-		printf("Error\nInvalid number of exits\n");
+		ft_printf("Error\nInvalid number of exits\n");
 		return (0);
 	}
 	if (map->count_player != 1)
 	{
-		printf("Error\nInvalid number of players\n");
+		ft_printf("Error\nInvalid number of players\n");
 		return (0);
 	}
 	if (map->count_collect < 1)
 	{
-		printf("Error\nInvalid number of collectibles\n");
+		ft_printf("Error\nInvalid number of collectibles\n");
 		return (0);
 	}
 	return (1);

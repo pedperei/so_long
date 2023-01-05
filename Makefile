@@ -9,6 +9,14 @@ FUNC = init_map.c\
 	   free_mem.c\
 	   get_next_line/get_next_line.c\
 	   get_next_line/get_next_line_utils.c\
+	   ft_printf/ft_aux.c\
+	   ft_printf/ft_hex.c\
+	   ft_printf/ft_itoa_u.c\
+	   ft_printf/ft_itoa.c\
+	   ft_printf/ft_printf.c\
+	   ft_printf/ft_ptr.c\
+	   ft_printf/ft_putchar_fd.c\
+	   ft_printf/ft_select.c\
 	   
 
 

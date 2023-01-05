@@ -6,7 +6,7 @@
 /*   By: pedperei <pedperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 14:36:59 by pedperei          #+#    #+#             */
-/*   Updated: 2023/01/05 00:20:39 by pedperei         ###   ########.fr       */
+/*   Updated: 2023/01/05 18:37:28 by pedperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	move_up(t_solong *so_long)
 		select_image(so_long, i, j);
 		select_image(so_long, i - 1, j);
 		so_long->n_moves++;
-		printf("MOVES:%d\n", so_long->n_moves);
+		ft_printf("MOVES:%d\n", so_long->n_moves);
 	}
 }
 
@@ -59,7 +59,7 @@ void	move_down(t_solong *so_long)
 		select_image(so_long, i, j);
 		select_image(so_long, i + 1, j);
 		so_long->n_moves++;
-		printf("MOVES:%d\n", so_long->n_moves);
+		ft_printf("MOVES:%d\n", so_long->n_moves);
 	}
 }
 
@@ -84,7 +84,7 @@ void	move_left(t_solong *so_long)
 		select_image(so_long, i, j);
 		select_image(so_long, i, j - 1);
 		so_long->n_moves++;
-		printf("MOVES:%d\n", so_long->n_moves);
+		ft_printf("MOVES:%d\n", so_long->n_moves);
 	}
 }
 
@@ -110,7 +110,7 @@ void	move_right(t_solong *so_long)
 		select_image(so_long, i, j);
 		select_image(so_long, i, j + 1);
 		so_long->n_moves++;
-		printf("MOVES:%d\n", so_long->n_moves);
+		ft_printf("MOVES:%d\n", so_long->n_moves);
 	}
 }
 

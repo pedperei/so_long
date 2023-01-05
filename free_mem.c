@@ -6,7 +6,7 @@
 /*   By: pedperei <pedperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 01:35:49 by pedperei          #+#    #+#             */
-/*   Updated: 2023/01/05 00:09:09 by pedperei         ###   ########.fr       */
+/*   Updated: 2023/01/05 18:36:26 by pedperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,11 @@ t_map	*free_t_map(t_map *map, char error)
 	free(map);
 	map = NULL;
 	if (error == 'r')
-		printf("Error\nMap is not a rectangule\n");
+		ft_printf("Error\nMap is not a rectangule\n");
 	if (error == 'w')
-		printf("Error\nMap is not surrounded by walls\n");
+		ft_printf("Error\nMap is not surrounded by walls\n");
 	if (error == 'p')
-		printf("Error\nMap does not have a valid path to conclude the game\n");
+		ft_printf("Error\nMap does not have a valid path to conclude the game\n");
 	return (map);
 }
 

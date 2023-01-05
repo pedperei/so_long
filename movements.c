@@ -6,12 +6,16 @@
 /*   By: pedperei <pedperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 14:36:59 by pedperei          #+#    #+#             */
-/*   Updated: 2022/12/31 15:20:06 by pedperei         ###   ########.fr       */
+/*   Updated: 2023/01/05 00:20:39 by pedperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
+/*Move up:
+Update player and collect positions, check limits and walls
+update images in mlx window
+print n_moves in terminal*/
 void	move_up(t_solong *so_long)
 {
 	int	i;
@@ -33,6 +37,10 @@ void	move_up(t_solong *so_long)
 	}
 }
 
+/*Move down:
+Update player and collect positions, check limits and walls
+update images in mlx window
+print n_moves in terminal*/
 void	move_down(t_solong *so_long)
 {
 	int	i;
@@ -55,6 +63,10 @@ void	move_down(t_solong *so_long)
 	}
 }
 
+/*Move left:
+Update player and collect positions, check limits and walls
+update images in mlx window
+print n_moves in terminal*/
 void	move_left(t_solong *so_long)
 {
 	int	i;
@@ -76,6 +88,10 @@ void	move_left(t_solong *so_long)
 	}
 }
 
+/*Move right:
+Update player and collect positions, check limits and walls
+update images in mlx window
+print n_moves in terminal*/
 void	move_right(t_solong *so_long)
 {
 	int	i;
@@ -98,6 +114,7 @@ void	move_right(t_solong *so_long)
 	}
 }
 
+/*keypress treatment*/
 int	key_press(int key_code, t_solong *param)
 {
 	if (key_code == KEY_ESC)

@@ -6,7 +6,7 @@
 /*   By: pedperei <pedperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 11:54:09 by pedperei          #+#    #+#             */
-/*   Updated: 2022/12/31 15:00:08 by pedperei         ###   ########.fr       */
+/*   Updated: 2023/01/04 23:49:29 by pedperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@
 # define KEY_D 100
 
 # define PX 32
-
 
 typedef struct s_map
 {
@@ -84,11 +83,13 @@ void			is_path_doable(t_map *map, char **save_path, int pos_l,
 					int pos_c);
 char			**free_map(char **map, int lines);
 t_map			*free_t_map(t_map *map, char error);
-void			open_xpm_images(t_solong *so_long);
+int				open_xpm_images(t_solong *so_long);
 void			select_image(t_solong *so_long, int i, int j);
 void			put_images_to_game(t_solong *so_long);
 int				check_if_game_finished(t_solong *so_long, int pos_l, int pos_c);
 int				key_press(int key_code, t_solong *param);
 int				free_mem_exit(t_solong *so_long);
+int				free_mem_exit_error(t_solong *so_long);
+t_map			*free_pointers_maps(t_map *map, char **map_str);
 
 #endif

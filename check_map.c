@@ -6,13 +6,11 @@
 /*   By: pedperei <pedperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 22:54:29 by pedperei          #+#    #+#             */
-/*   Updated: 2022/12/31 14:52:08 by pedperei         ###   ########.fr       */
+/*   Updated: 2023/01/04 23:40:03 by pedperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /*conta linhas existentes no mapa passado no ficheiro .ber
 nºlinhas = nº de strings que irão ser alocadas + 1 (NULL terminator)*/
@@ -35,6 +33,16 @@ int	count_lines(char *map)
 	return (i);
 }
 
+/*In this function we check if there is a valid path to conclude the game.
+Recursive function is called to move inside the map:
+if position is off limits we return
+if position is a wall('1') we return
+if position is an exit we put flag == 1 (exit path is possible) 
+	and return (because exit is considered wall)
+if position is a collectible and is the first time that position is checked
+	collectible is incremented (no return)
+After all these checks the position is marked as checked in save_path ('1')
+Function ends after all possible paths have been checked*/
 void	is_path_doable(t_map *map, char **save_path, int pos_l, int pos_c)
 {
 	if (!(pos_l >= 0 && pos_l < map->lin && pos_c >= 0 && pos_c < map->col))

@@ -46,6 +46,6 @@ void	*ft_calloc(size_t nitems, size_t size)
 	temp = (void *)malloc(size * nitems);
 	if (!temp)
 		return (NULL);
-	ft_memset(temp, 0, nitems);
+	ft_memset(temp, 0, size * nitems);
 	return (temp);
 }

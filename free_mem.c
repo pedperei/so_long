@@ -63,6 +63,7 @@ int	free_mem_exit(t_solong *so_long)
 	mlx_destroy_image(so_long->mlx_ptr, so_long->img_ptr->wall);
 	mlx_clear_window(so_long->mlx_ptr, so_long->win_ptr);
 	mlx_destroy_window(so_long->mlx_ptr, so_long->win_ptr);
+	mlx_destroy_display(so_long->mlx_ptr, so_long->win_ptr);
 	free(so_long->img_ptr);
 	free(so_long->map);
 	free(so_long->mlx_ptr);

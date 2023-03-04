@@ -24,7 +24,7 @@ char	**blank_map(int lin, int col)
 	i = 0;
 	while (i < lin)
 	{
-		blank_map[i] = (char *)calloc(col + 1, sizeof(char));
+		blank_map[i] = (char *)ft_calloc(col + 1, sizeof(char));
 		i++;
 	}
 	return (blank_map);

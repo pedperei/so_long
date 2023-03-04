@@ -61,6 +61,7 @@ int	free_mem_exit(t_solong *so_long)
 	mlx_destroy_image(so_long->mlx_ptr, so_long->img_ptr->exit);
 	mlx_destroy_image(so_long->mlx_ptr, so_long->img_ptr->player);
 	mlx_destroy_image(so_long->mlx_ptr, so_long->img_ptr->wall);
+	mlx_clear_window(so_long->mlx_ptr, so_long->win_ptr);
 	mlx_destroy_window(so_long->mlx_ptr, so_long->win_ptr);
 	free(so_long->img_ptr);
 	free(so_long->map);
@@ -77,7 +78,10 @@ int	free_mem_exit_error(t_solong *so_long)
 {
 	free_map(so_long->map->game_map, so_long->map->lin);
 	if (!so_long->mlx_ptr && !so_long->win_ptr)
+	{
+		mlx_clear_window(so_long->mlx_ptr, so_long->win_ptr);
 		mlx_destroy_window(so_long->mlx_ptr, so_long->win_ptr);
+	}
 	free(so_long->img_ptr);
 	free(so_long->map);
 	free(so_long->mlx_ptr);

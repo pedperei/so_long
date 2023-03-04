@@ -19,21 +19,10 @@ FUNC = init_map.c\
 	   ft_printf/ft_select.c\
 	   
 
-
-INCLUDES	= 	-IHeaders -IHeaders/libft
-OBJ		= 	$(FUNC:.c=.o)
-
-MLX_LIB_DIR = minilibx-linux/
-MLX_INCLUDE = mlx_linux
-MLX_FLAGS = -L$(MLX_LIB_DIR) -lmlx_Linux -L/usr/lib -lXext -lX11 -lm -lz
-
 all: $(NAME)
 
-$(NAME): $(OBJ) 
-	$(CC) $(OBJ) -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz -g -o $(NAME)
-
-%.o: %.c $(MLX_LIB)
-	$(CC) -Wall -Wextra -Werror -I/usr/include -Imlx_linux -g -c $< -o $@
+$(NAME): $(FUNC) 
+	$(CC) $(FUNC) -Wall -Wextra -Werror -I/usr/include -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz -g -o $(NAME)
 
 clean: 
 		rm -rf *.o
